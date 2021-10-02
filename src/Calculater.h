@@ -18,7 +18,9 @@ explicit MainWindow(QWidget *parent = nullptr);
 
 private slots:
 	void onResetButtonClick();
-	
+	void onCalcButtonClick();
+
+
 private:
 	Ui::MainWindow *ui;
     double left = 0;

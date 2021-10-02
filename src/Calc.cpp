@@ -34,3 +34,34 @@ void MainWindow::onResetButtonClick()
     left = 0;
     isLeft = true;
 }
+
+
+void MainWindow::onCalcButtonClick()
+{
+    QString currentValue = ui->output->text();
+    double value = currentValue.toDouble();
+    double result = 0;
+
+    qDebug() << "value" << value;
+
+    if (action == "+") {
+        result = left + value;
+    } else
+    if (action == "-") {
+        result = left - value;
+    } else
+    if (action == "x") {
+        result = left * value;
+    } else
+    if (action == "/") {
+        result = left / value;
+    }
+
+    qDebug() << "result" << result;
+
+    ui->output->setText(QString::number(result));
+
+    isCalced = true;
+    isLeft = true;
+    left = value;
+}
