@@ -1,5 +1,5 @@
-#include "Calculater.h"
-#include "ui_mainwindow.h"
+#include "Calc.h"
+#include "ui_Calc.h"
 #include <qdebug.h>
 #include <QPushButton>
 
