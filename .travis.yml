@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt install qt5-default
+
+script:
+  - qmake
+  - make
+  - ./test/tst_calctest
