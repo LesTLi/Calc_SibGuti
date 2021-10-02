@@ -90,3 +90,18 @@ void MainWindow::onNumButtonClick()
 
     ui->output->setText(currentValue + digit);
 }
+
+void MainWindow::onActionButtonClick()
+{
+    QPushButton *button = (QPushButton *)sender();
+    QString currentValue = ui->output->text();
+    double value = currentValue.toDouble();
+
+    action = button->text();
+    left = value;
+    isLeft = false;
+    isCalced = false;
+
+    qDebug() << "action" << action;
+    qDebug() << "left" << value;
+}
