@@ -65,3 +65,28 @@ void MainWindow::onCalcButtonClick()
     isLeft = true;
     left = value;
 }
+
+void MainWindow::onNumButtonClick()
+{
+    QPushButton *button = (QPushButton *)sender();
+    QString digit = button->text();
+    QString currentValue = ui->output->text();
+
+    qDebug() << "number clicked" << digit;
+
+    if (!isLeft || isCalced) {
+        qDebug() << "reset output";
+        currentValue = "";
+    }
+
+    isLeft = true;
+
+    if (isCalced) {
+        qDebug() << "reset left";
+        left = 0;
+    }
+
+    isCalced = false;
+
+    ui->output->setText(currentValue + digit);
+}
