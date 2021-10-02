@@ -1,16 +1,18 @@
 language: C++ 
-compiler: g++
-
-sudo: required
 dist: xenial
 
-before_install:
-  - sudo apt-get update -qq
-
-install:
-  - sudo apt install qt5-default
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-7
+      - g++-7
+      - qt5-default
 
 script:
+  - export CC=gcc-7
+  - export CXX=g++-7
   - qmake
   - make
   - ./test/tst_calctest
