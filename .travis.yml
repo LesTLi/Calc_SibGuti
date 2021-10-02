@@ -3,16 +3,13 @@ dist: xenial
 
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
     packages:
-      - gcc-7
-      - g++-7
       - qt5-default
 
+services:
+  - xvfb
+
 script:
-  - export CC=gcc-7
-  - export CXX=g++-7
-  - qmake
+  - qmake QMAKE_CXXFLAGS+=-std=gnu++11
   - make
-  - ./test/tst_calctest
+  - xvfb-run -a ./test/tst_calctest
