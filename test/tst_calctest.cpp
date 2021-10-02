@@ -17,6 +17,8 @@ private Q_SLOTS:
     void cleanupTestCase();
     void shouldAdd();
 	void shouldSub();
+	void shouldDiv();
+    void shouldMult();
 
 private:
     MainWindow* window;
@@ -55,6 +57,23 @@ void CalcTest::shouldSub()
     QVERIFY2(ui->output->text() == "6", "Failure");
 }
 
+void CalcTest::shouldDiv()
+{
+    ui->numButton9->click();
+    ui->actionButtonDiv->click();
+    ui->numButton3->click();
+    ui->calcButton->click();
+    QVERIFY2(ui->output->text() == "3", "Failure");
+}
+
+void CalcTest::shouldMult()
+{
+    ui->numButton3->click();
+    ui->actionButtonMult->click();
+    ui->numButton4->click();
+    ui->calcButton->click();
+    QVERIFY2(ui->output->text() == "12", "Failure");
+}
 
 QTEST_MAIN(CalcTest)
 
