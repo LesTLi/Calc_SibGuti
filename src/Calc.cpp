@@ -19,7 +19,18 @@ MainWindow::MainWindow(QWidget *parent) :
     for(int i = 0; i < 11; ++i){
         QString buttonName = "numButton" + QString::number(i);
         QPushButton *button = findChild<QPushButton *>(buttonName);
-        // When the button is released call num_pressed()
         connect(button, SIGNAL(clicked()), this,SLOT(onNumButtonClick()));
     }
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::onResetButtonClick()
+{
+    ui->output->clear();
+    left = 0;
+    isLeft = true;
 }
