@@ -6,6 +6,8 @@
 
 [![Build Status](https://app.travis-ci.com/LesTLi/Calc_SibGuti.svg?branch=master)](https://app.travis-ci.com/LesTLi/Calc_SibGuti)
 
+Используется веб-сервис для непрерывной интеграции Travis CI
+
   ![Calculator Screenshot](docs/Images/CalculatorScreenshot.jpg)
 
 Выполнили Шибаев А.В. и Гайдабура И.А. - ЗП-202
