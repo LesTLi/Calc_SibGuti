@@ -9,5 +9,3 @@
 Используется веб-сервис для непрерывной интеграции Travis CI
 
   ![Calculator Screenshot](docs/Images/CalculatorScreenshot.jpg)
-
-Выполнили Шибаев А.В. и Гайдабура И.А. - ЗП-202
